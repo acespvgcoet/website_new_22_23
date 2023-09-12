@@ -613,6 +613,49 @@ body
   .header-area.header-sticky .nav li a.active {
     color: #f5a425;
   }
+
+  .back-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    width: 14rem;
+    height: 4rem;
+    border: none;
+    background-color: brown;
+    box-shadow: .1rem .1rem .8rem #000000;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all .5s;
+  }
+  
+  .back-button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .back-button span::after{
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: -.6rem;
+    left: -1rem;
+    transition: 0.5s;
+    font-size: 1.5rem;
+  }
+  
+  .back-button:hover span {
+    padding-left: 1.5rem;
+  }
+  
+  .back-button:hover span:after {
+    opacity: 1;
+    left: 0;
+  }
   
   @media (max-width: 1200px) {
     .header-area .main-nav .nav li {
